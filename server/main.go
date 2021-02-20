@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
@@ -69,5 +70,10 @@ func main() {
 	originsOk := handlers.AllowedOrigins([]string{"chrome-extension://kemnlidlddhmnibdomgmkihieflaigdh"})
 	methodsOk := handlers.AllowedMethods([]string{"GET", "HEAD", "POST", "PUT", "OPTIONS"})
 
-	log.Fatal(http.ListenAndServe("localhost:8080", handlers.CORS(headersOk, originsOk, methodsOk)(r)))
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	log.Fatal(http.ListenAndServe("0.0.0.0:"+port, handlers.CORS(headersOk, originsOk, methodsOk)(r)))
 }
