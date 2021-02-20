@@ -1,4 +1,4 @@
-const server = "localhost:3000"
+const server = "scippr.herokuapp.com"
 const userID = Math.random().toString(36).substr(2, 9);
 
 
@@ -92,7 +92,7 @@ chrome.runtime.onMessage.addListener(({ event: eventType, data }, sender, sendRe
       sendResponse(state);
       break
     case "connect-to":
-      ws.connect("ws://" + server + "/ws/" + data);
+      ws.connect("wss://" + server + "/ws/" + data);
       state.mode = "connected"
       state.boatID = data
       sendResponse(data);
@@ -103,12 +103,12 @@ chrome.runtime.onMessage.addListener(({ event: eventType, data }, sender, sendRe
       ws.disconnect()
       break
     case "become-scippr":
-      fetch("http://" + server + "/boat")
+      fetch("https://" + server + "/boat")
         .then(res => res.text())
         .then(boatID => {
           state.mode = "connected";
           state.boatID = boatID;
-          ws.connect("ws://" + server + "/ws/" + boatID);
+          ws.connect("wss://" + server + "/ws/" + boatID);
           sendResponse(boatID)
         })
       break;
