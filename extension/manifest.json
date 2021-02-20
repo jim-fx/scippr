@@ -1,0 +1,25 @@
+{
+  "name": "Scippr",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "to scipp, or to become scipped that is the question",
+  "homepage_url": "http://jim-fx.com",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_title": "Scippr",
+    "default_popup": "popup/index.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

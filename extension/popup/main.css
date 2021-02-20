@@ -1,0 +1,60 @@
+body {
+  background: white;
+  min-width: 200px;
+  font-family: "Roboto Mono", monospace;
+  border-radius: 20px;
+}
+
+h2 {
+  color: #0066ff;
+  font-weight: 700;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  background-image: url(ship.svg);
+  background-size: contain;
+  height: 100%;
+  width: 30px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 2px;
+  margin-left: 6px;
+}
+
+button {
+  background-color: #0066ff;
+  color: white;
+  border-style: none;
+  padding: 10px;
+  font-family: "Roboto Mono";
+}
+
+/* img {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  height: 20px;
+} */
+
+#connect-to {
+  font-family: "Roboto Mono";
+  outline: none;
+  border: none;
+  border-bottom: solid medium #0066ff;
+}
+
+#state-wrapper > div {
+  display: none;
+}
+
+#state-wrapper.state-main > #main {
+  display: block;
+}
+#state-wrapper.state-scippr > #scippr {
+  display: block;
+}
+#state-wrapper.state-connected > #connected {
+  display: block;
+}
