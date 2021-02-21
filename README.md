@@ -19,6 +19,16 @@
 
 > Scippr lets multiple users share their keyboard/mouse for presentations
 
+## Install
+
+### Chrome
+
+1. [Download](https://github.com/jim-fx/scippr/releases/download/0.0.1/scippr_0.0.1.zip) the latest version
+2. Navigate to to [chrome://extensions](chrome://extensions)
+3. Enable developer mode with the toggle in the top right
+4. Click on "Load packed extension"
+5. Select the downloaded zip
+
 ## Features
 
 - Share mouse position
