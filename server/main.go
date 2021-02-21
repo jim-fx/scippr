@@ -67,7 +67,7 @@ func main() {
 	r.HandleFunc("/boat", handleCreateBoat)
 
 	headersOk := handlers.AllowedHeaders([]string{"X-Requested-With"})
-	originsOk := handlers.AllowedOrigins([]string{"chrome-extension://kemnlidlddhmnibdomgmkihieflaigdh"})
+	originsOk := handlers.AllowedOrigins([]string{"chrome-extension://kemnlidlddhmnibdomgmkihieflaigdh", "moz-extension://10ff2586-8447-4a0f-8892-d9ba35013388"})
 	methodsOk := handlers.AllowedMethods([]string{"GET", "HEAD", "POST", "PUT", "OPTIONS"})
 
 	port := os.Getenv("PORT")
