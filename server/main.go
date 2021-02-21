@@ -60,7 +60,7 @@ func main() {
 
 	r := mux.NewRouter()
 
-	r.HandleFunc("/boats", handleListBoats)
+	//r.HandleFunc("/boats", handleListBoats)
 
 	r.HandleFunc("/ws/{id}", handleConnectWS)
 
