@@ -45,7 +45,6 @@ func handleListBoats(w http.ResponseWriter, r *http.Request) {
 
 	var res = "["
 	for k, v := range boats {
-
 		res += fmt.Sprintf(`{"id": %v, "clientAmount": %v},`, k, len(v.clients))
 	}
 	res += "]"

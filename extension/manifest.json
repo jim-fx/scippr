@@ -3,17 +3,23 @@
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "to scipp, or to become scipped that is the question",
-  "homepage_url": "http://jim-fx.com",
+  "homepage_url": "https://jim-fx.com",
   "background": {
     "scripts": [
-      "background.js"
+      "background/background.js",
+      "background/hot-reload.js"
     ],
     "persistent": true
   },
+  "web_accessible_resources": [
+    "content/main.js",
+    "content/simmer.js",
+    "content/throttle.js"
+  ],
   "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
   },
   "browser_action": {
     "default_title": "Scippr",

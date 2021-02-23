@@ -92,13 +92,17 @@ chrome.windows.getCurrent(function (win) {
     const activeTab = tabArray[0];
 
     chrome.tabs.executeScript(activeTab.id, { code: "window.scipprRegistered" }, function (result) {
+      let e = chrome.runtime.lastError;
+      if (e !== undefined) {
+        console.log(activeTab.id, _, e);
+      }
       if (!result || !result[0]) {
         chrome.tabs.executeScript(activeTab.id, {
-          file: "inject.js"
+          file: "content/inject.js"
         }, _ => {
           let e = chrome.runtime.lastError;
           if (e !== undefined) {
-            console.log(tabId, _, e);
+            console.log(activeTab.id, _, e);
           }
         });
       }
