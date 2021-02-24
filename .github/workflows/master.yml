@@ -9,7 +9,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Get latest Tag
+        id: vars
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
       - name: yarn install, build, and test
+        env:
+          RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
         run: |
           yarn global add esbuild
           make ext
