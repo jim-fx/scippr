@@ -4,7 +4,7 @@
 <br>
 
 <p align="center">
-<img alt="Version" style="text-align: center;" src="./extension/icon.svg" width="150px"/>
+<img alt="Version" style="text-align: center;" src="./extension/assets/icon.svg" width="150px"/>
 </p>
 
 <br>
