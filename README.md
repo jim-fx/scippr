@@ -21,13 +21,19 @@
 
 ## Install
 
-### Chrome
+### > Chrome Stable
+
+1. Open the [Chrome Webstore Addon Page](https://chrome.google.com/webstore/detail/scippr/kgmoihkeogfopjphpplheinmjljmjipk)
+2. Click on "Add To Chrome"
+
+### > Chrome Latest
 
 1. [Download](https://github.com/jim-fx/scippr/releases/download/0.0.1/scippr_0.0.1.zip) the latest version
-2. Navigate to to [chrome://extensions](chrome://extensions)
-3. Enable developer mode with the toggle in the top right
-4. Click on "Load packed extension"
-5. Select the downloaded zip
+2. Unpack the downloaded zip file
+3. Navigate to to [chrome://extensions](chrome://extensions)
+4. Enable developer mode with the toggle in the top right
+5. Click on "Load unpacked extension"
+6. Select the folder you unzipped the zip into
 
 ## Features
 

@@ -7,8 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Zip Folder
-        run: zip -r release.zip extension
-      - name: Release to Github
-        run: echo "Release"
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: yarn install, build, and test
+        run: |
+          yarn global add esbuild
+          make ext
